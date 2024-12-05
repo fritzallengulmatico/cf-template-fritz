@@ -1,0 +1,14 @@
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: gulmatico-1022-lab2
+
+  Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0d06583a13678c938
+      SubnetId: subnet-0a59451798b491461  # Replace <subnet-id> with your specific Subnet ID
+      SecurityGroupIds:      # Specify the security group IDs as a list
+        - sg-06ce899e4f4aa2c83      
